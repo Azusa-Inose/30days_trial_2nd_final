@@ -1,0 +1,166 @@
+.results {
+    background-color: $primary-color;
+    .results-wrap {
+        padding: 215px 0 0 0;
+        @include mq('sp') {
+            padding: 391px 0 0 0;
+        }
+    }
+    .inner {
+        padding-right: 0;
+        margin-right: 0;
+        width: 96.8%;
+        max-width: initial; // 元々max-width: 1200pxとなっているのを解除
+        @include mq('sp') {
+            width: 100%;
+        }
+    }
+}
+.results-black-container {
+    background-color: $font-color;
+    .util-title {
+        text-align: left;
+        padding-top: 64px;
+        padding-left: 3.75rem;
+        color: #fff;
+        @include mq('sp') {
+            padding-top: 45px;
+            text-align: center;
+            padding-left: 0;
+            margin-bottom: 42px;
+        }
+    }
+
+    .results-list {
+        padding-left: 3.75rem;
+        padding-top: 63px;
+        @include mq('sp') {
+            padding-top: 0;
+            padding-left: 1rem;
+        }
+    }
+    .results-item {
+        width: 400px;
+        margin-right: 40px;
+        @include mq('sp') {
+            width: 274px;
+            margin-right: 20px;
+        }
+    }
+}
+
+
+    
+.results-item-header {
+    width: 100%;
+}
+
+.results-item-body {
+    background-color: #fff;
+    padding: 1rem 1rem 20px;
+    @include mq('sp') {
+        padding: 12px 12px 10px;
+    }
+    .results-item-title {
+        font-size: 20px;
+        margin-bottom: 13px;
+        font-weight: bold;
+        @include mq('sp') {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    }
+    .results-item-text {
+        line-height: (24 / 16);
+        // padding-bottom: 3px;
+        @include mq('sp') {
+            font-size: 12px;
+            line-height: 1.5;
+            letter-spacing: .01px;
+        }
+    }
+}
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+.slick-active {
+    opacity: 1;
+}
+.slick-current {
+    opacity: 1;
+}
+
+// pagenation style
+/* 全体のスタイル */
+.results-wrap {
+    .results-black-container {
+        .dot-class {
+            display: flex;
+            text-align: left;
+            margin-top: 40px;
+            position: relative;
+            width: 100%;
+            @include mq('sp') {
+                position: absolute;
+                margin-top: 24px;
+                width: 176px;
+                // margin-left: auto;
+                // margin-right: auto;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            li {
+                margin-right: 19px;
+                button {
+                    vertical-align: middle;
+                    width: 12px;
+                    height: 12px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    opacity: 1;
+                    font-size: 0;
+                }
+                &.slick-active {
+                    button {
+                        background-color: #fff;
+                        border-radius: 50%;
+                        width: 20px;
+                        height: 20px;
+                        border: 4px solid $font-color;
+                        box-shadow: 0 0 0 2px #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.results-btn-wrap {
+    margin-top: 40px;
+    margin-left: 60px;
+    padding-bottom: 60px;
+    @include mq('sp') {
+        margin: 68px auto 0;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+    .util-btn {
+        border: 1px solid #fff;
+        color: #fff;
+        width: 289px;
+        height: 64px;
+        @include mq('sp') {
+            width: 316px;
+            height: 54px;
+            line-height: 52px;
+            font-size: 18px;
+            letter-spacing: 3.6px;
+        }
+        &:hover {
+            background-color: #fff;
+            color: $font-color;
+        }
+    }
+}

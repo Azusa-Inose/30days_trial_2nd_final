@@ -1,0 +1,127 @@
+.footer {
+    background-color: $font-color;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.footer-inner {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    @include mq('sp') {
+        width: 59.2%;
+        display: block;
+    }
+    .footer-left {
+        display: inline-block;
+        @include mq('sp') {
+            // margin: 0 auto;
+            width: 100%;
+        }
+    }
+    .footer-right {
+        display: inline-block;
+        padding: 3px 3px 0 0;
+        margin-left: auto;
+        @include mq('sp') {
+            margin-top: 40px;
+            padding: 0;
+        }
+    }
+}
+
+.footer-sns-wrap {
+    display: flex;
+    justify-content: center;
+    width: 104px;
+    @include mq('sp') {
+        width: 100%;
+    }
+    .footer-sns-link{
+        @include mq('sp') {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            font-size: 20px;
+        }
+        &:hover {
+            .fa-color {
+                transition: all .6s;
+                color: #fff;
+            }
+        }
+        .fa-2x {
+            font-size: 2.3em;
+            @include mq('sp') {
+                font-size: 1.9em;
+            }
+        }
+    }
+}
+
+.footer-sns-twitter {
+    margin-right: 2rem;
+    @include mq('sp') {
+        margin-right: 0;
+        padding-right: 55px;
+    }
+}
+
+.fa-color {
+    color: #B2B2B2;
+}
+
+.footer-list {
+    margin-top: 37px;
+    @include mq('sp') {
+        margin-top: 42px;
+        text-align: center;
+    }
+    .footer-item {
+        margin-bottom: 24px;
+        @include mq('sp') {
+            font-size: 14px;
+            margin-bottom: 26px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .footer-item-link {
+            color: #fff;
+            letter-spacing: .4px;
+            @include mq('sp') {
+                letter-spacing: .35px;
+            }
+        }
+    }
+}
+
+.footer-logo {
+    font-size: 40px;
+    font-family: $font-family-english;
+    font-weight: 600;
+    color: #E3E3E3;
+    @include mq('sp') {
+        font-size: 26px;
+        line-height: 39px;
+        letter-spacing: .2px;
+    }
+}
+
+.footer-copy-right {
+    margin-top: 15px;
+    font-size: 12px;
+    text-align: right;
+    letter-spacing: .65px;
+    @include mq('sp') {
+        margin-top: 12px;
+        text-align: center;
+        font-size: 10px;
+    }
+    small {
+        opacity: .6;
+        @include mq('sp') {
+            letter-spacing: .7px;
+        }
+    }
+}

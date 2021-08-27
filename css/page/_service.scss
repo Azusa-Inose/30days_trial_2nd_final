@@ -1,0 +1,91 @@
+.service {
+    padding-top: 64px;
+    background-color: $font-color;
+    height: 400px;
+    @include mq('sp') {
+        padding-top: 44px;
+        height: 480px;
+    }
+
+    .service-inner {
+        max-width: 960px;
+        margin: 0 auto;
+        @media screen and (max-width: 1180px) {
+            width: 96.6%;
+        }
+        @include mq('sp') {
+            width: 91.5%;
+        }
+        .util-title {
+            color: #fff;
+            margin-bottom: 43px;
+        }
+    }
+
+    .service-wrap {
+        background-color: #fff;
+        margin-top: 64px;
+        padding-bottom: 60px;
+        box-shadow: 0px 5px 12px #3E3E3E33;
+        z-index: 95;
+        position: relative; // z-indexが効くように
+        @include mq('sp') {
+            margin-top: 0;
+            padding-bottom: 37px;
+        }
+    }
+}
+
+.service-list {
+    display: flex;
+    @include mq('sp') {
+        display: block;
+        padding-top: 40px;
+    }
+    .service-item {
+        margin-top: 60px;
+        @include mq('sp') {
+            margin-bottom: 34px;
+            margin-top: 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .service-item-header {
+            line-height: 4rem;
+            .service-item-pic-wrap {
+                width: 52px;
+                margin: 0 auto;
+                img {
+                    vertical-align: middle;
+                }
+            }
+        }
+        .service-item-body {
+            width: 71.8%;
+            margin: 0 auto;
+            @include mq('sp') {
+                width: 90.7%;
+            }
+            .service-item-title {
+                font-size: 20px;
+                line-height: (28 / 20);
+                font-family: $font-family-english;
+                font-weight: 600;
+                text-align: center;
+                padding-top: 7px;
+                padding-left: 2px;
+                letter-spacing: 4px;
+                @include mq('sp') {
+                    margin-top: 2px;
+                    line-height: (24 / 20);
+                }
+            }
+            .service-item-text {
+                font-size: 14px;
+                line-height: (24 / 14);
+                margin-top: 14px;
+            }
+        }
+    }
+}

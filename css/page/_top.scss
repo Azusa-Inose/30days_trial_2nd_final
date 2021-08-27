@@ -1,0 +1,79 @@
+
+.top {
+    background-image: url('../img/mv.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding-top: 84px;
+    @include mq('sp') {
+        padding-top: 68px;
+        background-position: 22% 50%;
+        .inner {
+            padding: 0 1rem;
+            .top-wrap {
+                padding: 153px 0 230px;
+            }
+        }
+    }
+
+    .top-wrap {
+        padding: 145px 0 152px 50%;
+    }
+}
+
+.top-title {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: .02px;
+    line-height: (48 / 32);
+    margin-bottom: 26px;
+    @include mq('sp') {
+        font-size: 24px;
+        line-height: (40 / 24);
+        margin-bottom: 23px;
+    }
+}
+
+.top-text {
+    font-size: 1.125rem;
+    font-weight: bolder;
+    letter-spacing: .45px;
+    line-height: (28 / 18);
+    margin-bottom: 2.5rem;
+    @include mq('sp') {
+        font-size: 14px;
+        line-height: (20 /14);
+        letter-spacing: 0;
+        margin-bottom: 26px;
+    }
+}
+
+.top-btn-wrap {
+    @include mq('sp') {
+        text-align: center;
+    }
+    .top-btn {
+        display: inline-block;
+        background-color: #FFAA3B;
+        width: 282px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 18px;
+        box-shadow: 0px 3px 5px #3E3E3E33;
+        border-radius: 10px;
+        transition: all .3s;
+        @include mq('sp') {
+            font-size: 1rem;
+            width: 222px;
+            height: 3rem;
+        }
+        &:hover {
+            background-color: #F18900;
+        }
+    }
+}

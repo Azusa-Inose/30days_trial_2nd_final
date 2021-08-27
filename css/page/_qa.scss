@@ -1,0 +1,114 @@
+.qa {
+    background-image: url('../img/qa-bg.png');    
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 65px 40px 120px;
+    @include mq('sp') {
+        padding: 40px 1rem 62px;
+        background-position: center center;
+        .util-title {
+            line-height: 37px;
+        }
+    }
+}
+
+.qa-wrap {
+    padding-top: 64px;
+    margin-left: auto;
+    width: 51%;
+    @include mq('sp') {
+        padding-top: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+    .qa-list {
+        .qa-item {
+            width: 100%;
+            border-radius: 4px;
+            background-color: #fff;
+            display: inline-block;
+            padding: 1rem;
+            cursor: pointer;
+
+            .qa_active {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background-image: url('../img/minus.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 15px;
+                    height: 15px;
+                    top: 40%;
+                    right: 0;
+                }
+            }
+        }
+        .qa-item + .qa-item {
+            margin-top: 2rem;
+            @include mq('sp') {
+                margin-top: 24px;
+            }
+        }
+        .qa-item.qa-item-shoter {
+            padding-top: 15px;
+            .qa-answer-wrap {
+                margin-top: 13px;
+            }
+        }
+    }
+}
+
+
+.qa-question-wrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url('../img/plus.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 17px;
+        height: 17px;
+        right: 0;
+    }
+
+    .qa-inline {
+        font-family: $font-family-english;
+        color: #fff;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        display: inline-block;
+        background-color: #3B69FF;
+        border-radius: 50%;
+    }
+    .qa-question-text {
+        display: inline-block;
+        font-weight: bold;
+        margin-left: 17px;
+        line-height: (24 / 16);
+    }
+}
+
+.qa-answer-wrap {
+    display: none;
+    margin-top: 1rem;
+    padding: 12px  1rem;
+    background-color: #3B69FF33;
+    border-radius: 4px;
+    @include mq('sp') {
+        padding: 10px 1rem 7px 12px;
+    }
+    .qa-answer-text {
+        line-height: (24 / 16);
+        @include mq('sp') {
+            font-size: 14px;
+            line-height: 1.45;
+        }
+    }
+}

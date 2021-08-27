@@ -1,0 +1,425 @@
+.contact {
+    padding: 60px 0;
+    background-image: url('../img/contact-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    @include mq('sp') {
+        padding: 40px 0;
+    }
+
+    .contact-inner {
+        width: 75%;
+        max-width: 960px;
+        margin: 0 auto;
+        @include mq('sp') {
+            width: 91.4%;
+        }
+    }
+}
+
+.contact-wrap {
+    width: 100%;
+}
+
+.contact-top-wrap {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(2, 1, 1, 0.4)),url('../img/contact1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    // 初めは左右にpaddingつけて中央寄せしようとしていたけど、これだとスマホ時にテキストが2行になるためつけないように変更
+    // padding: 63px 242px 57px;
+    // padding: 6.28% 25.2% 5.68%;
+    padding: 6.28% 0 5.68%;
+    color: #fff;
+    border-radius: 12px 12px 0 0 ;
+    @include mq('sp') {
+        padding: 11.5% 4.66%;
+    }
+    .util-title {
+        margin-bottom: 12px;
+        @include mq('sp') {
+            margin-bottom: 0;
+            line-height: 37px;
+        }
+    }
+
+    .contact-sp-img {
+        padding: 40px 1rem 37px;
+        box-shadow: 0 3px 6px #00000029;
+        display: block;
+    }
+    .contact-top-text {
+        padding-top: 15px;
+        line-height: (24 / 16);
+        opacity: .8;
+        text-align: center;
+        @include mq('sp') {
+            font-size: 14px;
+            line-height: 1.4;
+            padding-top: 12px;
+            text-align: left;
+        }
+    }
+}
+
+.contact-content-wrap {
+    background-color: #fff;
+    padding: 60px 0;
+    border-radius: 0 0 12px 12px;
+    @include mq('sp') {
+        padding: 40px 0;
+    }
+    .contact-content-inner {
+        padding: 0 120px;
+        @include mq('sp') {
+            padding: 0 12px;
+        }
+    }
+}
+
+.contact-content-list {
+    .contact-content-item {
+        display: flex;
+        margin-bottom: 2rem;
+        @include mq('sp') {
+            display: block;
+            margin-bottom: 33px;
+        }
+        &:last-child {
+            margin-bottom: 40px;
+            @include mq('sp') {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    .contact-content-item.contact-email {
+        margin-bottom: 30px;
+    }
+    .contact-content-item.contact-gender {
+        margin-bottom: 32px;
+    }
+    .contact-content-item.contact-kana {
+        @include mq('sp') {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+input::placeholder {
+    color: rgb(177, 176, 176);
+  }
+  
+  /* IE */
+  input:-ms-input-placeholder {
+    color: rgb(177, 176, 176);
+  }
+
+.contact-content-item dt {
+    font-weight: 600;
+    width: 26%;
+    @include mq('sp') {
+        width: 100%;
+    }
+}
+
+.select-title {
+    line-height: 40px;
+    @include mq('sp') {
+        line-height: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.select-content {
+    border: 1px solid #707070;
+    border-radius: 0;
+    color: inherit;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 7px 40px 7px 8px;
+    width: 100%;
+    appearance: none;
+    @include mq('sp') {
+        font-size: 14px;
+        padding: 11px 190px 11px 12px;
+        line-height: 14px;
+    }
+    &:hover {
+        box-shadow: 0 0 5px #4973FF80;
+    }
+  }
+  
+  // select要素のデザインを無効にする（IE用）
+  .select-content::-ms-expand {
+    display: none;  
+  }
+  
+  .select-content:focus {
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    box-shadow: none;
+    outline: none;
+  }
+
+  .dt-title {
+      line-height: 2rem;
+      @include mq('sp') {
+          line-height: 1rem;
+      }
+  }
+
+  .dd-data {
+      width: 73.9%;
+      @include mq('sp') {
+          width: 100%;
+      }
+      input[type="text"],[type="email"] {
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid #707070;
+          padding: 9px 6.5px 7px 15px;
+          letter-spacing: 1.4px;
+          @include mq('sp') {
+              font-size: 14px;
+              padding: 11px 6.5px 5px 0;
+          }
+          &:focus {
+            border-bottom: 1px solid #4973FF;
+            outline: none;
+            box-shadow: 0 8px 8px -8px #4973FF80;
+          }
+      }
+  }
+
+  .dd-data.dd-data-email {
+      @include mq('sp') {
+          padding-top: 3px;
+      }
+  }
+
+  .dt-email label {
+      vertical-align: middle;
+  }
+
+  .inline-required {
+      display: inline-block;
+      color: #fff;
+      background-color: #FF4646;
+      width: 40px;
+      height: 1rem;
+      border-radius: 2px;
+      font-size: 12px;
+      line-height: 1rem;
+      text-align: center;
+      margin-left: 12px;
+      @include mq('sp') {
+          margin-left: 20px;
+      }
+  }
+
+  .contact-radio-wrap {
+      @include mq('sp') {
+          margin-top: 18px;
+      }
+      .contact-radio + .contact-radio {
+        margin-left: 37px;
+        @include mq('sp') {
+            margin-left: 35px;
+        }
+      }
+      .radio-select-input {
+          display: none;
+      }
+      // テキストの左側にスペースを確保
+      .contact-radio-part {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 0 0 1.2em;
+        position: relative;
+      }
+      // ラジオの枠
+      .radio-select-input + .contact-radio-part::before {
+        content: "";
+        -webkit-transform: translateY(-50%);
+        background: #fff;
+        border: 1px solid #707070;
+        border-radius: 50%;
+        display: block;
+        height: 12px;
+        left: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 12px;
+        transition: all 0.3s ease 0s;
+    }
+    
+    // ラジオのチェック中身
+    .radio-select-input + .contact-radio-part::after {
+        content: "";
+        -webkit-transform: translateY(-50%);
+        background: #3B69FF;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        height: 6px;
+        left: 3px;
+        opacity: 0;
+        padding: 2px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s ease 0s;
+        width: 6px;
+    }
+
+    .contact-radio {
+        .radio-select-input:checked + .contact-radio-part::after {
+                opacity: 1;
+        }
+    }
+
+    .radio-select-input + .contact-radio-part:hover {
+        &::before {
+                border-color: #3B69FF;
+                box-shadow: 0 0 6px #4973FF33;
+        }
+    }
+        
+    // マウスが押下されている時
+    .radio-select-input + .contact-radio-part:active {
+        &::before {
+                border-color: #3B69FF;
+                background-color: #4973FF33;
+        }
+    }
+}
+
+.contact-textarea {
+    margin-top: 8px;
+    width: 100%;
+    height: 200px;
+    @include mq('sp') {
+        margin-top: 1rem;
+        height: 160px;
+    }
+    &:focus {
+        outline: none;
+        border: 1px solid #4973FF;
+        box-shadow: 0 0 8px #4973FF80;
+    }
+}
+
+.contact-privacypolicy-wrap {
+    margin: 41px 0 0;
+    font-size: 18px;
+    font-weight: bold;
+    @include mq('sp') {
+        margin: 30px 0 0;
+        font-size: 1rem;
+    }
+}
+
+.contact-checkbox {
+    .contact-checkbox-input {
+        display: none;
+    }
+
+    .contact-checkbox-input + .contact-checkbox-part {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 0 0 1.2em;
+        position: relative;
+    }
+
+    .contact-checkbox-input + .contact-checkbox-part::before {
+        -webkit-transform: translateY(-50%);
+        background: #fff;
+        border: 1px solid #707070;
+        content: "";
+        display: block;
+        height: 18px;
+        left: 0;
+        position: absolute;
+        top: -5px;
+        transform: translateY(-50%);
+        width: 18px;
+    }
+
+    .contact-checkbox-input + .contact-checkbox-part::after {
+        -webkit-transform: translateY(-50%) rotate(-45deg);
+        border-bottom: 2px solid #3B69FF;
+        border-left: 2px solid #3B69FF;
+        content: "";
+        display: block;
+        height: 8px;
+        left: 2px;
+        margin-top: -4px;
+        opacity: 0;
+        position: absolute;
+        top: -50%;
+        transform: translateY(-100%) rotate(-45deg);
+        transition: all 0.3s ease 0s;
+        width: 14px;
+    }
+
+    .contact-checkbox-input:checked + .contact-checkbox-part::after {
+        opacity: 1;
+    }
+
+    .contact-checkbox-input + .contact-checkbox-part:hover {
+        &::before {
+            border: 1px solid #4973FF;
+            box-shadow: 0 0 5px #4973FF33;
+        }
+    }
+
+    .contact-checkbox-input + .contact-checkbox-part:active {
+        &::before {
+            border: 1px solid #4973FF;
+            background-color: #4973FF33;
+        }
+    }
+
+    .privacypolicy-text {
+        display: inline-block;
+        margin-left: 13px;
+        @include mq('sp') {
+            margin-left: 14px;
+        }
+    }
+}
+
+.contact-submit-btn-wrap {
+    margin-top: 41px;
+    @include mq('sp') {
+        margin-top: 36px;
+    }
+    .contact-submit-btn {
+        display: block;
+        background-color: #B2B2B2;
+        color: #fff;
+        width: 173px;
+        height: 50px;
+        border: none;
+        font-size: 18px;
+        box-shadow: 0px 3px 5px #00000033;
+        border-radius: 10px;
+        transition: all .3s;
+        @include mq('sp') {
+            margin: 0 auto;
+            font-size: 1rem;
+            width: 165px;
+            height: 48px;
+        }
+    }
+}
+
+.-active {
+    .contact-submit-btn {
+        background-color: #FFAA3B;
+        cursor: pointer;
+        &:hover {
+            background-color: #F18900;
+        }
+    }
+}

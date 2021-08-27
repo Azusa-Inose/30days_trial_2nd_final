@@ -1,0 +1,105 @@
+.access {
+    padding-bottom: 256px;
+    background-color: $primary-color;
+    @include mq('sp') {
+        padding-bottom: 0;
+    }
+
+    .access-black {
+        width: 76.6%;
+        background-color: $font-color;
+        color: #fff;
+        padding: 125px 100px 120px;
+        .util-title {
+            text-align: left;
+            margin-bottom: 59px;
+            @include mq('sp') {
+                margin-bottom: 40px;
+            }
+        }
+        @media only screen and (max-width: 1080px) {
+            width: 100%;
+        }
+        @include mq('sp') {
+            padding: 44px 1rem 60px;
+        }
+    }
+}
+
+.access-text {
+    line-height: (24 / 16);
+    margin-bottom: 29px;
+    @include mq('sp') {
+        font-size: 14px;
+        line-height: 1.45;
+        margin-bottom: 20px;
+    }
+}
+
+.access-btn-wrap {
+    @include mq('sp') {
+        padding-left: 1px;
+    }
+    .util-btn {
+        width: 314px;
+        height: 64px;
+        border: 1px solid #fff;
+        background-color: $font-color;
+        color: #fff;
+        cursor: pointer;
+        z-index: 100;
+        position: relative;
+        letter-spacing: 2px;
+        z-index: 1;
+        &:hover {
+            background-color: #fff;
+            color: $font-color;
+        }
+        @include mq('sp') {
+            width: 100%;
+            height: 54px;
+            line-height: 54px;
+            font-size: 18px;
+            letter-spacing: 1.8px;
+        }
+    }
+}
+
+.access-googlemap-wrap{
+    width: 56.8%;
+    height: 56.8%;
+    position: absolute;
+    @media only screen and (max-width: 1080px) {
+        position: static;
+        margin-bottom: 50px;
+        width: 90%;
+        height: 90%;
+    }
+    @include mq('sp') {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 25px;
+    }
+}
+
+.access-iframe-wrap {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    // padding-top: 520 / 726 * 100%; // 400(mapのheight) 800(mapのwidth)
+    padding-top: 70%; // 400(mapのheight) 800(mapのwidth)
+}
+
+.access-iframe-wrap iframe {
+    position: absolute;
+    top: -38.5%;
+    left: 56.9%;
+    width: 100%;
+    height: 100%;
+    border: none;
+    box-shadow: 0 0 10px #3E3E3E33;
+    @media only screen and (max-width: 1080px) {
+        top: 0;
+        left: 0;
+    }
+}

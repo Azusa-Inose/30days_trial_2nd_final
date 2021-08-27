@@ -1,0 +1,68 @@
+.price {
+    padding: 124px 0 268px;
+    background-color: $primary-color;
+    @include mq('sp') {
+        padding: 44px 0 120px;
+    }
+    .price-inner {
+        width: 75%;
+        margin: 0 auto;
+        max-width: 960px;
+        @include mq('sp') {
+            width: 91.4%;
+        }
+        .util-title {
+            margin-bottom: 43px;
+        }
+    }
+}
+
+.price-table-wrap {
+    margin-top: 64px;
+    width: 100%;
+    border-collapse: collapse;
+    @include mq('sp') {
+        margin-top: 40px;
+    }
+}
+
+.price-table-wrap th, td {
+    vertical-align: middle;
+    height: 60px;
+    font-family: $font-family-english;
+    font-weight: 600;
+    font-size: 24px;
+    @include mq('sp') {
+        font-size: 20px;
+        height: 55px;
+        line-height: 54px;
+    }
+}
+
+.price-table-wrap th {
+    background-color: $font-color;
+    color: #fff;
+    border: 1px solid #fff;
+    width: 27%;
+    @include mq('sp') {
+        width: 29%;
+    }
+}
+
+.price-table-wrap td {
+    background-color: #fff;
+    padding-left: 42px;
+    border: 1px solid #707070;
+    width: 73%;
+    @include mq('sp') {
+        padding-left: 20px;
+    }
+}
+
+.price-text {
+    font-size: 12px;
+    margin-top: 12px;
+    @include mq('sp') {
+        margin-top: 8px;
+    }
+}

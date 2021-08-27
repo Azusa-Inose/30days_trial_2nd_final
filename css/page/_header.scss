@@ -1,0 +1,119 @@
+
+.header {
+    position: fixed;
+    z-index: 98;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, .02), rgba(0, 0, 0, .02));
+    @include mq('sp') {
+        background-color: #fff;
+    }
+    .header-inner {
+        width: 632px;
+        margin: 0 auto;
+        @include mq('sp') {
+            width: 91.4%;
+            padding: 20px 0;
+        }
+        .header-logo {
+            display: none;
+            @include mq('sp') {
+                display: block;
+                font-size: 23px;
+                font-family: $font-family-english;
+                font-weight: 600;
+                line-height: (28 / 23);
+            }
+        }
+    }
+}
+
+.drawer--right.drawer-open .drawer-hamburger {
+    @include mq('sp') {
+        z-index: 101;
+        right: 78%;
+        .hamburgar-open {
+            display: none;
+        }
+        .hamburgar-close {
+            width: 21px;
+            display: block;
+        }
+    }
+}
+
+// ドロワーアイコン
+.drawer-custom {
+    display: none;
+    @include mq('sp') {
+        padding: 22px .75rem;
+        z-index: 101;
+        display: block;
+        .hamburgar-open {
+            width: 26px;
+        }
+        .hamburgar-close {
+            display: none;
+        }
+    }
+}
+
+// ドロワーナビゲーション中身
+.drawer--right.drawer-open .drawer-nav {
+    z-index: 100;
+    width: 80%;
+    .drawer-menu {
+        padding-top: 54%;
+        text-align: center;
+        font-family: $font-family-english;
+        .header-drawer-nav-item {
+            margin-bottom: 33px;
+            font-size: 18px;
+            line-height: (22 / 18);
+            font-weight: 500;
+        }
+    }
+}
+
+.drawer-overlay {
+    background-color: #3E3E3E;
+    opacity: .7;
+    z-index: 99;
+}
+
+.header-nav-list {
+    display: flex;
+    justify-content: center;
+    @include mq('sp') {
+        display: none;
+    }
+
+    .header-nav-item {
+        display: block;
+        
+        .header-nav-link {
+            display: block;
+            padding: 34px 0;
+            font-family: $font-family-english;
+            letter-spacing: -0.4px;
+            &:hover {
+                @extend .menu-active;
+            }
+        }
+    }
+    .header-nav-item + .header-nav-item {
+        margin-left: 40px;
+    }
+}
+
+// activeメニューにスタイリング
+.menu-active {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        border-bottom: 1px solid #3E3E3E;
+        width: 100%;
+        right: 0;
+        top: 54px;
+    }
+}
